@@ -1,82 +1,40 @@
-<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:form = "sap.ui.layout.form">
-	<Dialog title="New HU"  titleAlignment="Center" contentHeight="20%" contentWidth="30%">
-
-	<content>
-	  <form:SimpleForm class="sapUiTinyMarginBegin">
-	   	<Table  items="{path:'ReceivingModel>/NewHU'}">
-				<columns>
-					<Column >
-						<Label text="Pack Material"></Label>
-					</Column>
-					<Column >
-						<Label text="HU Ident"></Label>
-					</Column>
-					<Column >
-						<Label text="Quantity"></Label>
-					</Column>
-					
-				</columns>
-				<items>
-					<ColumnListItem >
-						<cells>
-							<Text text="{ReceivingModel>PackMaterial}"></Text>
-							<Text text="{ReceivingModel>HUIdent}"></Text>
-							<HBox>
-								<Input value="{ReceivingModel>Quantity}"></Input>
-								<core:Icon src="sap-icon://product" class="sapUiTinyMarginBegin sapUiTinyMarginTop"></core:Icon>
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:form="sap.ui.layout.form">
+	<Dialog title="New HU" titleAlignment="Center" contentHeight="20%" contentWidth="30%">
+		<content>
+			<form:SimpleForm class="sapUiTinyMarginBegin">
+				<Table items="{path:'ReceivingModel>/NewHU'}">
+					<columns>
+						<Column >
+							<Label text="Pack Material"></Label>
+						</Column>
+						<Column >
+							<Label text="HU Ident"></Label>
+						</Column>
+						<Column >
+							<Label text="Quantity"></Label>
+						</Column>
+					</columns>
+					<items>
+						<ColumnListItem >
+							<cells>
+								<Text text="{ReceivingModel>PackMaterial}"></Text>
+								<Text text="{ReceivingModel>HUIdent}"></Text>
+								<HBox>
+									<Input value="{ReceivingModel>Quantity}"></Input>
+									<core:Icon src="sap-icon://product" class="sapUiTinyMarginBegin sapUiTinyMarginTop"></core:Icon>
 								</HBox>
-							<!--<Text text="{ExpQty}"></Text>-->
-						
-							<!--<core:Icon src="sap-icon://complete" ></core:Icon>-->
-							<!--<Text text="{ReceivingModel>Status}"></Text>-->
-							<!--<ObjectNumber number="{CWS}" unit="{CWSCurrency}"/>-->
-							<!--<ObjectNumber number="{LY}" unit="{LYUnit}"/>-->
-							<!--<ObjectNumber number="{LW}" unit="{LWUnit}"/>-->
-						</cells>
-					</ColumnListItem>
-				</items>
-			</Table>
-	  
-	  	
-	  </form:SimpleForm>
-		<!--<HBox class="sapUiSmallMarginBegin">-->
-  <!--      <RadioButton text="Add Blank Line" selected="true"/>-->
-  <!--     	<ComboBox selectedKey="{newItem}"  width="14rem" items="{RequestModel>/FilteredReq}" change="onItemSelect" >-->
-		<!--		<customData>-->
-		<!--	<core:CustomData key="newItem"/></customData>-->
-		<!--		<core:Item key="{RequestModel>ItemId}" text="{RequestModel>ItemId}" />-->
-		<!--	</ComboBox>-->
-    <!--</HBox>-->
-    	
-	</content>
-
-	<!--<footer>-->
-		
-
-	<!--<Toolbar>-->
-	<!--		<Button icon="sap-icon://add"  press="onAddRow" text="Row" class="sapUiLargeMarginEnd"/>-->
-	<!--		<ToolbarSpacer/>-->
-	<!--		<Button text="Cancel" press="onCancelPack"></Button>-->
-	<!--		<Button text="Save" type="Emphasized" press="onSaveHu"></Button>-->
-	<!--</Toolbar>-->
-	<!--	</footer>-->
-	<buttons>
-			<Button icon="sap-icon://add"  press="onAddRow" text="Row" class="sapUiLargeMarginEnd"/>
+							</cells>
+						</ColumnListItem>
+					</items>
+				</Table>
+			</form:SimpleForm>
+		</content>
+		<buttons>
+			<Button icon="sap-icon://add" press="onAddRow" text="Row" class="sapUiLargeMarginEnd"/>
 			<Button></Button>
 			<Button></Button>
-			
-				<Button text="Cancel" press="onCancelPack" class="sapUiLargeMarginBegin"></Button>
-				<Button text="Save" type="Emphasized" press="onSaveHu"></Button>
-				
+			<Button text="Cancel" press="onCancelPack" class="sapUiLargeMarginBegin"></Button>
+			<Button text="Save" type="Emphasized" press="onSaveHu"></Button>
 		</buttons>
-	<!--<beginButton >-->
-		
- 	<!--	<Button text="Cancel" press="onCancelPack"></Button>-->
-	<!--</beginButton>-->
-	<!--<endButton >-->
-	<!--	<Button text="Save" type="Emphasized" press="onSaveHu"></Button>-->
-	<!--</endButton>-->
-	
-
 	</Dialog>
 </core:FragmentDefinition>

@@ -21,26 +21,7 @@ sap.ui.define([
 			controller = this;
 			controller.router = sap.ui.core.UIComponent.getRouterFor(this);
 
-			// var oCreateData = {
-			// 	"BillofLanding": "1001010",
-			// 	"MeansofTransport":"",
-			// 	"MeansofTransportArray": [
-			// 		{
-			// 			"key":"Air Cargo",
-			// 			"value":"Air Cargo"
-			// 		},
-			// 		{
-			// 				"key":"Shipment",
-			// 			"value":"Shipment"
-			// 		}
-			// 		],
-			// 	"MeansofTransportID": "",
-			// 	"PurchaseOrder":"",
-			// 	"Date":"",
-			// 	"ExternalID":""
-			// };
-			// var oJsonModel = new JSONModel(oCreateData);
-			// controller.getView().setModel(oJsonModel, "RecModel");
+		
 
 		},
 		/* =========================================================== */
@@ -72,7 +53,7 @@ sap.ui.define([
 					]
 
 				});
-				// var filter = new Filter("RequestId", FilterOperator.Contains, sQuery);
+			
 				aFilters.push(oFilter);
 			}
 
@@ -193,8 +174,7 @@ sap.ui.define([
 			debugger;
 			var path = oEvent.getSource().getBindingContextPath();
 			var selectedIBD = this.getView().getModel("ReceivingModel").getProperty(path).IBD;
-			// get the list item, either from the listItem parameter or from the event's source itself (will depend on the device-dependent mode).
-			// this._showDetail(oEvent.getParameter("listItem") || oEvent.getSource());
+		
 			controller.router.navTo("detail", {
 				IBD: selectedIBD
 			});
@@ -358,24 +338,8 @@ sap.ui.define([
 			
 			}
 
-			//  if(IBD === ""){
-			//  	sap.ui.getCore().byId("billofLanding").setValueState("Error");
-			//  		sap.ui.getCore().byId("billofLanding").setValueStateText("Please Enter Bill of Landing");
-
-			//  }
-			// else if(PurchaseOrder === ""){
-			// 		sap.ui.getCore().byId("PurchaseOrder").setValueState("Error");
-			//  		sap.ui.getCore().byId("PurchaseOrder").setValueStateText("Please Enter Purchase Order");
-
-			// }
-			// else if(Date === ""){
-			//      sap.ui.getCore().byId("Date").setValueState("Error");
-			//  		sap.ui.getCore().byId("Date").setValueStateText("Please Enter Date");
-
-			// }
-			// else {
-
-			// }
+		
+		
 
 		}
 
