@@ -1,0 +1,14 @@
+<mvc:View controllerName="com.mindset.wm.receiving.receiving.controller.App" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m"
+	xmlns:core="sap.ui.core" xmlns:form="sap.ui.layout.form">
+	<Page >
+
+		<content>
+			<form:SimpleForm editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="4" labelSpanM="3" labelSpanS="12" emptySpanXL="1"
+				emptySpanL="1" emptySpanM="1" emptySpanS="0" columnsXL="2" columnsL="2" columnsM="2" adjustLabelSpan="false">
+				<form:content>
+						
+				</form:content>
+			</form:SimpleForm>
+		</content>
+	</Page>
+</mvc:View>

@@ -1,0 +1,128 @@
+{
+	"_version": "1.12.0",
+	"sap.app": {
+		"id": "com.mindset.wm.receiving.receiving",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"dataSources": {
+			"mainService": {
+				"uri": "/",
+				"type": "OData",
+				"settings": {
+					"odataVersion": "2.0",
+					"localUri": "localService/metadata.xml"
+				}
+			}
+		},
+		"sourceTemplate": {
+			"id": "ui5template.basicSAPUI5ApplicationProject",
+			"version": "1.40.12"
+		}
+	},
+
+	"sap.ui": {
+		"technology": "UI5",
+		"icons": {
+			"icon": "",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		}
+	},
+
+	"sap.ui5": {
+		"flexEnabled": false,
+		"rootView": {
+			"viewName": "com.mindset.wm.receiving.receiving.view.App",
+			"type": "XML",
+			"async": true,
+			"id": "App"
+		},
+		"dependencies": {
+			"minUI5Version": "1.65.6",
+			"libs": {
+				"sap.ui.layout": {},
+				"sap.ui.core": {},
+				"sap.m": {}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "com.mindset.wm.receiving.receiving.i18n.i18n"
+				}
+			},
+				"": {
+				"dataSource": "mainService"
+			}
+		},
+		"resources": {
+			"css": [{
+				"uri": "css/style.css"
+			}]
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"async": true,
+				"viewPath": "com.mindset.wm.receiving.receiving.view",
+				"controlAggregation": "pages",
+				"controlId": "app",
+				"clearControlAggregation": false
+			},
+			"routes": [
+				{
+					"name": "master",
+					"pattern": "",
+					"target": [
+						"master",
+						"Wapp"
+					]
+				},
+				{
+					"name": "detail",
+					"pattern": "{IBD}",
+					"target": [
+						"master",
+						"details"
+					]
+				}
+			],
+			"targets": {
+				"master": {
+					"viewId": "master",
+					"viewName": "Master",
+					"controlAggregation": "masterPages"
+				},
+				"details": {
+					"viewName": "Detail",
+					"viewId": "detail",
+					"controlAggregation": "detailPages"
+				},
+				"Wapp": {
+					"viewId": "WApp",
+					"viewName": "WApp",
+					"controlAggregation": "detailPages"
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,180 @@
+<mvc:View controllerName="com.mindset.wm.receiving.receiving.controller.Detail" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form" xmlns:uxap="sap.uxap" xmlns:layout="sap.ui.layout"
+	xmlns:sample="sap.uxap.sample.AnchorBar.block" xmlns:blockcolor="sap.uxap.sample.SharedBlocks">
+	<Page showHeader="false" class="sapUiResponsivePadding--header">
+		<content>
+			<Toolbar >
+				<ToolbarSpacer width="40%"></ToolbarSpacer>
+				<Label text="Receiving Details" textAlign="Center"></Label>
+			</Toolbar>
+			<ObjectHeader class="sapUiSmallMarginTop">
+				<attributes>
+					<ObjectAttribute title="IBD" text="{ReceivingModel>/selectedIBD}"></ObjectAttribute>
+					<ObjectAttribute title="PO" text="{ReceivingModel>/selectedPO}"></ObjectAttribute>
+					<ObjectAttribute title="Vendor ID" text="{ReceivingModel>/selectedVendorID}"></ObjectAttribute>
+					<ObjectAttribute title="Vendor Name" text="{ReceivingModel>/selectedVendorVendorName}"></ObjectAttribute>
+					<ObjectAttribute title="ASN" text="{ReceivingModel>/selectedASN}"></ObjectAttribute>
+				</attributes>
+				<statuses>
+					<ObjectStatus text="{ReceivingModel>/selectedDate}"></ObjectStatus>
+				</statuses>
+				<!--<Text -->
+				<!--			text="{path: 'BankAccountOpeningDate',type: 'sap.ui.model.type.DateTime',formatOptions: {pattern:'MM/dd/yyyy'}}" wrapping="false"/>-->
+			</ObjectHeader>
+			<Toolbar>
+				<ToolbarSpacer></ToolbarSpacer>
+				<Button icon="sap-icon://add" text="MRN" press="onAddMRN"></Button>
+			</Toolbar>
+			<Table id="TableId" items="{path:'ReceivingModel>/FilteredReqType'}">
+				<columns>
+					<Column width="4rem">
+						<Label text="Line"></Label>
+					</Column>
+					<Column width="4rem">
+						<Label text="Product"></Label>
+					</Column>
+					<Column width="4rem">
+						<Label text="Exp.Qty"></Label>
+					</Column>
+					<Column width="7rem">
+						<Label text="Rec.Qty"></Label>
+					</Column>
+					<Column width="4rem">
+						<Label text="Batch"></Label>
+					</Column>
+					<Column width="4rem">
+						<Label text="Bin"></Label>
+					</Column>
+					<Column width="4rem">
+						<Label text="Stock"></Label>
+					</Column>
+					<Column width="4rem">
+						<Label text="Pack"></Label>
+					</Column>
+					<Column width="4rem">
+						<Label text="Status"></Label>
+					</Column>
+				</columns>
+				<items>
+					<ColumnListItem >
+						<cells>
+							<Text text="{ReceivingModel>Line}"></Text>
+							<Text text="{ReceivingModel>Product}"></Text>
+							<!--<Text text="{ExpQty}"></Text>-->
+							<Input value="{ReceivingModel>ExpQty}"></Input>
+							<HBox>
+								<Input value="{ReceivingModel>RecQty}"/>
+								<ComboBox selectedKey="{ReceivingModel>RecQtyDropSelected}" change="onChange"  items="{ReceivingModel>RecQtyDrop}" class="sapUiTinyMarginBegin">
+									<customData>
+										<core:CustomData key="RecQtyDropSelected"/></customData>
+									<core:Item key="{ReceivingModel>key}" text="{ReceivingModel>value}"/>
+								</ComboBox>
+							</HBox>
+							<Input value="{ReceivingModel>Batch}"/>
+							<Input value="{ReceivingModel>Bin}"/>
+							<Text text="{ReceivingModel>Stock}"></Text>
+							<!--<Text text="{ReceivingModel>Pack}"></Text>-->
+							<Button text="{ReceivingModel>Pack}" press="onPack"></Button>
+							<core:Icon src="{ReceivingModel>Status}"></core:Icon>
+							<!--<core:Icon src="sap-icon://complete" ></core:Icon>-->
+							<!--<Text text="{ReceivingModel>Status}"></Text>-->
+							<!--<ObjectNumber number="{CWS}" unit="{CWSCurrency}"/>-->
+							<!--<ObjectNumber number="{LY}" unit="{LYUnit}"/>-->
+							<!--<ObjectNumber number="{LW}" unit="{LWUnit}"/>-->
+						</cells>
+					</ColumnListItem>
+				</items>
+			</Table>
+			<!--<uxap:ObjectPageLayout class="subheaderdesigns" enableLazyLoading="false" headerContentPinnable="false">-->
+			<!--	<uxap:headerTitle>-->
+			<!--		<uxap:ObjectPageDynamicHeaderTitle visible="false"></uxap:ObjectPageDynamicHeaderTitle>-->
+			<!--	</uxap:headerTitle>-->
+			<!--	<uxap:headerContent width="50%" height="50%">-->
+			<!--		<Toolbar height="100%" class="toolbar">-->
+			<!--			<content>-->
+			<!--				<VBox>-->
+			<!--					<HBox>-->
+			<!--						<Label text="{i18n>newAccountRequest}"/>-->
+			<!--						<Text text="{RequestId}" class="sapUiTinyMarginBegin"/>-->
+			<!--					</HBox>-->
+			<!--					<HBox>-->
+			<!--						<Label text="{i18n>requestor_D}"/>-->
+			<!--						<Text text="{Requestor}" class="sapUiTinyMarginBegin"/>-->
+			<!--					</HBox>-->
+			<!--					<HBox>-->
+			<!--						<Label text="{i18n>date}"/>-->
+			<!--						<Text text="{path: 'BankAccountOpeningDate',type: 'sap.ui.model.type.DateTime',formatOptions: {pattern:'MM/dd/yyyy'}}" class="sapUiTinyMarginBegin"/>-->
+			<!--					</HBox>-->
+			<!--				</VBox>-->
+			<!--				<ToolbarSpacer/>-->
+			<!--				<ToolbarSpacer/>-->
+			<!--				<VBox >-->
+			<!--					<HBox>-->
+			<!--						<Button text="{i18n>assignToMe}" type="Accept" press="handlePopoverPress"/>-->
+			<!--<Button icon="sap-icon://history" class="sapUiTinyMarginBeginEnd"/>-->
+			<!--						<Text text="{Progress}" class="sapUiTinyMarginTop"/>-->
+			<!--					</HBox>-->
+			<!--					<HBox>-->
+			<!--						<Label text="{i18n>assignedTo}"/>-->
+			<!--						<Text text="{AssignTo}" class="sapUiTinyMarginBegin"/>-->
+			<!--					</HBox>-->
+			<!--					<HBox>-->
+			<!--						<Label text="{i18n>user}"/>-->
+			<!--						<Text text="{User}" class="sapUiTinyMarginBegin"/>-->
+			<!--					</HBox>-->
+			<!--				</VBox>-->
+			<!--			</content>-->
+			<!--		</Toolbar>-->
+			<!--	</uxap:headerContent>-->
+			<!--<uxap:sections>-->
+			<!--	<uxap:ObjectPageSection title="{i18n>requestor}" titleUppercase="false" showTitle="false">-->
+			<!--		<uxap:subSections>-->
+			<!--			<uxap:ObjectPageSubSection title="">-->
+			<!--				<uxap:blocks>-->
+			<!--					<core:Fragment fragmentName="com.mindset.fin.PendingRequests.fragment.Requestor" type="XML"/>-->
+			<!--				</uxap:blocks>-->
+			<!--			</uxap:ObjectPageSubSection>-->
+			<!--		</uxap:subSections>-->
+			<!--	</uxap:ObjectPageSection>-->
+			<!--	<uxap:ObjectPageSection title="{i18n>treasury}" titleUppercase="false" showTitle="false">-->
+			<!--		<uxap:subSections>-->
+			<!--			<uxap:ObjectPageSubSection title="">-->
+			<!--				<uxap:blocks>-->
+			<!--					<core:Fragment fragmentName="com.mindset.fin.PendingRequests.fragment.Treasury" type="XML"/>-->
+			<!--				</uxap:blocks>-->
+			<!--			</uxap:ObjectPageSubSection>-->
+			<!--		</uxap:subSections>-->
+			<!--	</uxap:ObjectPageSection>-->
+			<!--	<uxap:ObjectPageSection title="{i18n>bankDetails}" titleUppercase="false" showTitle="false">-->
+			<!--		<uxap:subSections>-->
+			<!--			<uxap:ObjectPageSubSection title="">-->
+			<!--				<uxap:blocks>-->
+			<!--					<core:Fragment fragmentName="com.mindset.fin.PendingRequests.fragment.BankDetails" type="XML"/>-->
+			<!--				</uxap:blocks>-->
+			<!--			</uxap:ObjectPageSubSection>-->
+			<!--		</uxap:subSections>-->
+			<!--	</uxap:ObjectPageSection>-->
+			<!--	<uxap:ObjectPageSection title="{i18n>notes}" titleUppercase="false" showTitle="false">-->
+			<!--		<uxap:subSections>-->
+			<!--			<uxap:ObjectPageSubSection title="">-->
+			<!--				<uxap:blocks>-->
+			<!--					<core:Fragment fragmentName="com.mindset.fin.PendingRequests.fragment.Notes" type="XML"/>-->
+			<!--				</uxap:blocks>-->
+			<!--			</uxap:ObjectPageSubSection>-->
+			<!--		</uxap:subSections>-->
+			<!--	</uxap:ObjectPageSection>-->
+			<!--</uxap:sections>-->
+			<!--</uxap:ObjectPageLayout>-->
+		</content>
+		<footer>
+			<Toolbar>
+				<!--<Button text="{i18n>save}" press="onSave"/>-->
+				<ToolbarSpacer/>
+				<!--<Button text="{i18n>reassign}" press="onReassign"/>-->
+				<!--<Button text="{i18n>reject}" type="Reject" press="onReject"/>-->
+				<!--<Button text="{i18n>approve}" type="Accept" press="onApprove"/>-->
+				<Button text="Submit" press="onSubmit"/>
+			</Toolbar>
+		</footer>
+	</Page>
+</mvc:View>

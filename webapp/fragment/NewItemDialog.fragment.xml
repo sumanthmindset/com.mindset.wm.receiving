@@ -1,0 +1,40 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:form = "sap.ui.layout.form">
+	<Dialog title="Inbound Delivery Items" contentHeight="80%" contentWidth="35%" titleAlignment="Center" afterClose="dialogAfterclose">
+	<content>
+	  <form:SimpleForm  id="simpleform" class="sapUiTinyMarginBegin">
+	  	<Label text="Bill of Landing" required="true"></Label>
+	  	<Input type="Number" id="billofLanding" value="{ReceivingModel>/BillofLanding}" valueState="None" valueStateText="" liveChange="onInChange" width="20rem"></Input>
+	  	<Label  text="Means of Transport"></Label>
+	  	<ComboBox id="MeansofTransport" selectedKey="{MeansofTransport}" change="onChange"  width="20rem"
+				items="{ReceivingModel>/MeansofTransportArray}">
+				<customData>
+			<core:CustomData key="MeansofTransport"/></customData>
+				<core:Item key="{ReceivingModel>key}" text="{ReceivingModel>value}" />
+			</ComboBox>
+	  	<Label text="Means of Transport ID"></Label>
+	  	<Input id="MeansofTransportID" value="{ReceivingModel>/MeansofTransportID}"  width="20rem"></Input>
+	  	<Label text="Purchase Order" required="true"></Label>
+	  	<Input id="PurchaseOrder" type="Number" value="{ReceivingModel>/PurchaseOrder}" valueState="None"  liveChange="onPurchaseChange" width="20rem"></Input>
+	  	<Label text="Date" required="true"></Label>
+	  	<DatePicker  id="Date" value="{ReceivingModel>/Date}" change="onDateChange"  valueState="None"  width="20rem"></DatePicker>
+	  	<Label text="External ID"/>
+	  	<Input id="ExternalID" value="{ReceivingModel>/ExternalID}"  width="20rem"></Input>
+	  	
+	  </form:SimpleForm>
+		<!--<HBox class="sapUiSmallMarginBegin">-->
+  <!--      <RadioButton text="Add Blank Line" selected="true"/>-->
+  <!--     	<ComboBox selectedKey="{newItem}"  width="14rem" items="{RequestModel>/FilteredReq}" change="onItemSelect" >-->
+		<!--		<customData>-->
+		<!--	<core:CustomData key="newItem"/></customData>-->
+		<!--		<core:Item key="{RequestModel>ItemId}" text="{RequestModel>ItemId}" />-->
+		<!--	</ComboBox>-->
+    <!--</HBox>-->
+	</content>
+	<beginButton >
+		<Button text="Cancel" press="onCancel"></Button>
+	</beginButton>
+	<endButton >
+		<Button text="Save" type="Emphasized" press="onAddItem"></Button>
+	</endButton>
+	</Dialog>
+</core:FragmentDefinition>

@@ -1,0 +1,40 @@
+<mvc:View controllerName="com.mindset.wm.receiving.receiving.controller.Master" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core">
+	<Page showHeader="false">
+		<subHeader>
+			<Toolbar>
+				<content>
+					<SearchField search="onSearch" showSearchButton="true" liveChange="onLiveChange"></SearchField>
+				</content>
+			</Toolbar>
+		</subHeader>
+		<content>
+			<List items="{ path:'ReceivingModel>/Requests'}" id="masterList" busyIndicatorDelay="{masterView>/delay}" noDataText="{masterView>/noDataText}">
+				<CustomListItem type="Active" press="onSelectionChange">
+					<HBox  class="sapUiSmallMargin">
+						<VBox>
+							<Label text="IBD: {ReceivingModel>IBD}"/>
+							<Label text="PO: {ReceivingModel>PO}"/>
+							<Label text="Vendor ID: {ReceivingModel>VendorID}" />
+							<Label text="Vendor Name: {ReceivingModel>VendorName}" />
+							<Label text="ASN: {ReceivingModel>ASN}" />
+						</VBox>
+						<VBox alignItems="End">
+							<Text text="{ReceivingModel>Date}"></Text>
+						</VBox>
+					</HBox>
+				</CustomListItem>
+			</List>
+		</content>
+		<footer>
+			<Toolbar>
+				<Button icon="sap-icon://sort" press="onOpenViewSettings" tooltip="{i18n>sort}" id="sortButton"/>
+				<ToolbarSpacer width="75%"></ToolbarSpacer>
+				<Button icon="sap-icon://add"   id="addButton" press="onAdd"/>
+				</Toolbar>
+		</footer>
+		<dependents>
+			<core:Fragment fragmentName="com.mindset.wm.receiving.receiving.view.ViewSettingsDialog" type="XML"/>
+		</dependents>
+	</Page>
+</mvc:View>

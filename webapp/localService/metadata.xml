@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx"
+	xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+	<edmx:Reference
+		Uri="https://webidecp-b2b9d6cc8.dispatcher.us1.hana.ondemand.com/destinations/S4H_ETHAN/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='LOCAL')/$value"
+		xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx"><edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common"/></edmx:Reference>
+	<edmx:Reference
+		Uri="https://webidecp-b2b9d6cc8.dispatcher.us1.hana.ondemand.com/destinations/S4H_ETHAN/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_CAPABILITIES',Version='0001',SAP__Origin='LOCAL')/$value"
+		xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx"><edmx:Include Namespace="Org.OData.Capabilities.V1" Alias="Capabilities"/></edmx:Reference>
+	<edmx:Reference
+		Uri="https://webidecp-b2b9d6cc8.dispatcher.us1.hana.ondemand.com/destinations/S4H_ETHAN/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMUNICATION',Version='0001',SAP__Origin='LOCAL')/$value"
+		xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx"><edmx:Include Namespace="com.sap.vocabularies.Communication.v1" Alias="Communication"/></edmx:Reference>
+	<edmx:Reference
+		Uri="https://webidecp-b2b9d6cc8.dispatcher.us1.hana.ondemand.com/destinations/S4H_ETHAN/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_AGGREGATION',Version='0001',SAP__Origin='LOCAL')/$value"
+		xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx"><edmx:Include Namespace="Org.OData.Aggregation.V1" Alias="Aggregation"/></edmx:Reference>
+	<edmx:Reference
+		Uri="https://webidecp-b2b9d6cc8.dispatcher.us1.hana.ondemand.com/destinations/S4H_ETHAN/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_PERSONALDATA',Version='0001',SAP__Origin='LOCAL')/$value"
+		xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx"><edmx:Include Namespace="com.sap.vocabularies.PersonalData.v1" Alias="PersonalData"/></edmx:Reference>
+	<edmx:DataServices m:DataServiceVersion="2.0">
+		<Schema Namespace="ZFIN_C_BAM_REQUEST_CDS" xml:lang="en" sap:schema-version="1" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+			<EntityType Name="ZFIN_C_BAM_REQUESTType" sap:label="Request Information for BAM View" sap:content-version="1">
+				<Key>
+				     <PropertyRef Name ="IBD"/>
+				</Key>
+				
+				<Property Name="IBD" Type="Edm.String" Nullable="false" MaxLength="32"/>
+				<Property Name="PO" Type="Edm.String" Nullable="false" MaxLength="32"/>
+				<Property Name="VendorID" Type="Edm.String" Nullable="false" MaxLength="32"/>
+				<Property Name="VendorName" Type="Edm.String" Nullable="false" MaxLength="32"/>
+				<Property Name="ASN" Type="Edm.String" Nullable="false" MaxLength="32"/>
+				<Property Name="Line" Type="Edm.String" Nullable="false" MaxLength="32"/>
+				<Property Name="Product" Type="Edm.String" Nullable="false" MaxLength="32"/>
+				<Property Name="ExpQty" Type="Edm.String" Nullable="false" MaxLength="32"/>
+				<Property Name="RecQty" Type="Edm.String" Nullable="false" MaxLength="32"/>
+				<Property Name="Batch" Type="Edm.String" Nullable="false" MaxLength="32"/>
+				<Property Name="Bin" Type="Edm.String" Nullable="false" MaxLength="32"/>
+				<Property Name="Stock" Type="Edm.String" Nullable="false" MaxLength="32"/>
+				<Property Name="Pack" Type="Edm.String" Nullable="false" MaxLength="32"/>
+				<Property Name="Status" Type="Edm.String" Nullable="false" MaxLength="32"/>
+				<Property Name="RequestId" Type="Edm.String" Nullable="false" MaxLength="32"/>
+			<Property Name="AssignTo" Type="Edm.String" Nullable="false" MaxLength="32"/>
+				<Property Name="Progress" Type="Edm.String" Nullable="false" MaxLength="32"/>
+				<Property Name="Requestor" Type="Edm.String" Nullable="false" MaxLength="32"/>
+				<Property Name="User" Type="Edm.String" Nullable="false" MaxLength="32"/>
+				<Property Name="Deadline" Type="Edm.String" MaxLength="32"/>
+				<Property Name="LegalEntity" Type="Edm.String" MaxLength="64"/>
+				<Property Name="IncorporationCountry" Type="Edm.String" MaxLength="32"/>
+				<Property Name="Purpose" Type="Edm.String" MaxLength="128"/>
+				<Property Name="Currency" Type="Edm.String" MaxLength="5" sap:semantics="currency-code"/>
+				<Property Name="BankReason" Type="Edm.String" MaxLength="1"/>
+				<Property Name="IsSegregated" Type="Edm.String" MaxLength="1"/>
+				<Property Name="TransactionTypes" Type="Edm.String" MaxLength="1"/>
+				<Property Name="Regulations" Type="Edm.String" MaxLength="1"/>
+				<Property Name="VolumeAndValue" Type="Edm.String" MaxLength="1"/>
+				<Property Name="ReconciliationSystem" Type="Edm.String" MaxLength="1"/>
+				<Property Name="DSID" Type="Edm.String" MaxLength="1"/>
+				<Property Name="AccountType" Type="Edm.String" MaxLength="1"/>
+				<Property Name="RequestRegion" Type="Edm.String" MaxLength="1"/>
+				<Property Name="IsApproved" Type="Edm.String" MaxLength="1"/>
+				<Property Name="ApproverName" Type="Edm.String" MaxLength="1"/>
+				<Property Name="BankName" Type="Edm.String" MaxLength="1"/>
+				<Property Name="BankBranch" Type="Edm.String" MaxLength="1"/>
+				<Property Name="BankShortName" Type="Edm.String" MaxLength="1"/>
+				<Property Name="FundingType" Type="Edm.String" MaxLength="1"/>
+				<Property Name="AccountActivity" Type="Edm.String" MaxLength="1"/>
+				<Property Name="ResponsibleRegion" Type="Edm.String" MaxLength="1"/>
+				<Property Name="BankRelationshipType" Type="Edm.String" MaxLength="1"/>
+				<Property Name="AdditionalComments" Type="Edm.String" MaxLength="1"/>
+				<Property Name="BankAccountNumber" Type="Edm.String" MaxLength="1"/>
+				<Property Name="BankAccountOpeningDate" Type="Edm.DateTime" Precision="0" sap:display-format="Date"/>
+				<Property Name="IBANNumber" Type="Edm.String" MaxLength="1"/>
+				<Property Name="SWIFTBIC" Type="Edm.String" MaxLength="1"/>
+				<Property Name="LocalBankCode" Type="Edm.String" MaxLength="1"/>
+				<Property Name="BankFullAddress" Type="Edm.String" MaxLength="1"/>
+				<Property Name="ConsideredInConjunction" Type="Edm.String" MaxLength="1"/>
+				<Property Name="Notes" Type="Edm.String" MaxLength="1"/></EntityType>
+			<EntityContainer Name="ZFIN_C_BAM_REQUEST_CDS_Entities" m:IsDefaultEntityContainer="true" sap:message-scope-supported="true"
+				sap:supported-formats="atom json xlsx"><EntitySet Name="ZFIN_C_BAM_REQUEST" EntityType="ZFIN_C_BAM_REQUEST_CDS.ZFIN_C_BAM_REQUESTType" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:content-version="1"/></EntityContainer>
+			<Annotations Target="ZFIN_C_BAM_REQUEST_CDS.ZFIN_C_BAM_REQUEST_CDS_Entities" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+				<Annotation Term="Aggregation.ApplySupported">
+					<Record>
+						<PropertyValue Property="Transformations">
+							<Collection>
+								<String>aggregate</String>
+								<String>groupby</String>
+								<String>filter</String>
+							</Collection>
+						</PropertyValue><PropertyValue Property="Rollup" EnumMember="None"/></Record>
+				</Annotation>
+			</Annotations><atom:link rel="self"
+				href="https://webidecp-b2b9d6cc8.dispatcher.us1.hana.ondemand.com/destinations/S4H_ETHAN/sap/opu/odata/sap/ZFIN_C_BAM_REQUEST_CDS/$metadata"
+				xmlns:atom="http://www.w3.org/2005/Atom"/><atom:link rel="latest-version"
+				href="https://webidecp-b2b9d6cc8.dispatcher.us1.hana.ondemand.com/destinations/S4H_ETHAN/sap/opu/odata/sap/ZFIN_C_BAM_REQUEST_CDS/$metadata"
+				xmlns:atom="http://www.w3.org/2005/Atom"/></Schema>
+	</edmx:DataServices>
+</edmx:Edmx>

@@ -1,0 +1,682 @@
+{
+	"RecQtyDropselected": "",
+	"BillofLanding": "",
+	"MeansofTransport": "",
+	"MeansofTransportArray": [{
+		"key": "Air Cargo",
+		"value": "Air Cargo"
+	}, {
+		"key": "Shipment",
+		"value": "Shipment"
+	}],
+	"MeansofTransportID": "",
+	"PurchaseOrder": "",
+	"Date": "",
+	"ExternalID": "",
+	"NewHU":[
+		{
+		"PackMaterial":"3000005457",
+		"HUIdent":"0020511440",
+		"Quantity":"997 EA"
+		},
+		{
+				"PackMaterial":"3000005457",
+		"HUIdent":"0020511440",
+		"Quantity":"997 EA"
+		}
+		],
+
+	"Requests": [
+		{
+			"IBD": "180010722",
+			"PO": "4500003324",
+			"VendorID": "PV2007",
+			"VendorName": "ADDRESSH CHANGE",
+			"ASN": "DANTESPO4",
+			"Line": "10",
+			"Product": "7000134395",
+			"ExpQty": "1000",
+			"RecQty": "1000",
+			"Batch": "THRTEST",
+			"Bin": "GR-ZONE",
+			"Stock": "FO",
+			"Pack": "Pack",
+			"Date": "9/1/20",
+			"Status": "sap-icon://complete",
+			"RecQtyDropSelected": "",
+			"selectedDate":"",
+			"RecQtyDrop": [{
+				"key": "KIT",
+				"value": "KIT"
+			}, {
+				"key": "ROL",
+				"value": "ROL"
+
+			}, {
+				"key": "EA",
+				"value": "EA"
+
+			}],
+
+			"Items": [
+				{
+				"ItemIBD": "180010722",
+				"PO": "4500003324",
+				"VendorID": "PV2007",
+				"VendorName": "ADDRESSH CHANGE",
+				"ASN": "DANTESPO4",
+				"Line": "10",
+				"Product": "7000134395",
+				"ExpQty": "1000",
+				"RecQty": "1000",
+				"Batch": "THRTEST",
+				"Bin": "GR-ZONE",
+				"Stock": "FO",
+				"Pack": "Pack",
+				"Date": "09/01/2000",
+				"Status": "sap-icon://complete",
+				"RecQtyDropSelected": "",
+				"RecQtyDrop": [{
+					"key": "KIT",
+					"value": "KIT"
+				}, {
+					"key": "ROL",
+					"value": "ROL"
+
+				}, {
+					"key": "EA",
+					"value": "EA"
+
+				}]
+			}, 
+			{
+				"ItemIBD": "180010722",
+				"PO": "4500003324",
+				"VendorID": "PV2007",
+				"VendorName": "ADDRESSH CHANGE",
+				"ASN": "DANTESPO4",
+				"Line": "10",
+				"Product": "7000134395",
+				"ExpQty": "1000",
+				"RecQty": "1000",
+				"Batch": "THRTEST",
+				"Bin": "GR-ZONE",
+				"Stock": "FO",
+				"Pack": "Pack",
+				"Date": "09/01/2000",
+				"Status": "sap-icon://goalseek",
+				"RecQtyDrop": [{
+					"key": "KIT",
+					"value": "KIT"
+				}, {
+					"key": "ROL",
+					"value": "ROL"
+
+				}, {
+					"key": "EA",
+					"value": "EA"
+
+				}]
+			}, 
+			{
+				"ItemIBD": "180010722",
+				"PO": "4500003324",
+				"VendorID": "PV2007",
+				"VendorName": "ADDRESSH CHANGE",
+				"ASN": "DANTESPO4",
+				"Line": "10",
+				"Product": "7000134395",
+				"ExpQty": "1000",
+				"RecQty": "1000",
+				"Batch": "THRTEST",
+				"Bin": "GR-ZONE",
+				"Stock": "FO",
+				"Pack": "Pack",
+				"Status": "sap-icon://goalseek",
+				"Date": "09/01/2000",
+				"RecQtyDrop": [{
+					"key": "KIT",
+					"value": "KIT"
+				}, {
+					"key": "ROL",
+					"value": "ROL"
+
+				}, {
+					"key": "EA",
+					"value": "EA"
+
+				}]
+			}, 
+			{
+				"ItemIBD": "180010722",
+				"PO": "4500003324",
+				"VendorID": "PV2007",
+				"VendorName": "ADDRESSH CHANGE",
+				"ASN": "DANTESPO4",
+				"Line": "10",
+				"Product": "7000134395",
+				"ExpQty": "1000",
+				"RecQty": "1000",
+				"Batch": "THRTEST",
+				"Bin": "GR-ZONE",
+				"Stock": "FO",
+				"Pack": "Pack",
+				"Status": "sap-icon://complete",
+				"Date": "09/01/2000",
+				"RecQtyDrop": [{
+					"key": "KIT",
+					"value": "KIT"
+				}, {
+					"key": "ROL",
+					"value": "ROL"
+
+				}, {
+					"key": "EA",
+					"value": "EA"
+
+				}]
+			}]
+		}, 
+		{
+			"IBD": "180010723",
+			"PO": "4500003325",
+			"VendorID": "PV2008",
+			"VendorName": "PURCHASING",
+			"ASN": "DANTESPO5",
+			"Status": "sap-icon://complete",
+			"Line": "10",
+			"Product": "7000134395",
+			"ExpQty": "1000",
+			"RecQty": "1000",
+			"Batch": "THRTEST",
+			"Bin": "GR-ZONE",
+			"Stock": "FO",
+			"Pack": "Pack",
+			"Date": "2/28/20",
+			"selectedDate":"",
+
+			"RecQtyDropSelected": "",
+			"RecQtyDrop": [{
+				"key": "KIT",
+				"value": "KIT"
+			}, {
+				"key": "ROL",
+				"value": "ROL"
+
+			}, {
+				"key": "EA",
+				"value": "EA"
+
+			}],
+
+			"Items": [
+				{
+				"ItemIBD": "180010723",
+				"PO": "4500003325",
+				"VendorID": "PV2008",
+				"VendorName": "PURCHASING",
+				"ASN": "DANTESPO5",
+				"Line": "10",
+				"Product": "7000134395",
+				"ExpQty": "1000",
+				"RecQty": "1000",
+				"Batch": "THRTEST",
+				"Bin": "GR-ZONE",
+				"Stock": "FO",
+				"Pack": "Pack",
+				"Date": "09/01/2000",
+				"Status": "sap-icon://complete",
+				"RecQtyDropSelected": "",
+				"RecQtyDrop": [{
+					"key": "KIT",
+					"value": "KIT"
+				}, {
+					"key": "ROL",
+					"value": "ROL"
+
+				}, {
+					"key": "EA",
+					"value": "EA"
+
+				}]
+			}, 
+			{
+				"ItemIBD": "180010723",
+				"PO": "4500003325",
+				"VendorID": "PV2008",
+				"VendorName": "PURCHASING",
+				"ASN": "DANTESPO5",
+				"Status": "sap-icon://complete",
+				"Line": "10",
+				"Product": "7000134395",
+				"ExpQty": "1000",
+				"RecQty": "1000",
+				"Batch": "THRTEST",
+				"Bin": "GR-ZONE",
+				"Stock": "FO",
+				"Pack": "Pack",
+				"Date": "09/01/2000",
+				"RecQtyDrop": [{
+					"key": "KIT",
+					"value": "KIT"
+				}, {
+					"key": "ROL",
+					"value": "ROL"
+
+				}, {
+					"key": "EA",
+					"value": "EA"
+
+				}]
+			}, 
+			{
+				"ItemIBD": "180010723",
+				"PO": "4500003325",
+				"VendorID": "PV2008",
+				"VendorName": "PURCHASING",
+				"ASN": "DANTESPO5",
+				"Status": "sap-icon://goalseek",
+				"Line": "10",
+				"Product": "7000134395",
+				"ExpQty": "1000",
+				"RecQty": "1000",
+				"Batch": "THRTEST",
+				"Bin": "GR-ZONE",
+				"Stock": "FO",
+				"Pack": "Pack",
+				"Date": "09/01/2000",
+				"RecQtyDrop": [{
+					"key": "KIT",
+					"value": "KIT"
+				}, {
+					"key": "ROL",
+					"value": "ROL"
+
+				}, {
+					"key": "EA",
+					"value": "EA"
+
+				}]
+			}]
+		}, 
+		{
+			"IBD": "180010725",
+			"PO": "4500003326",
+			"VendorID": "PV2009",
+			"VendorName": "ADRESSH CHANGE",
+			"ASN": "DANTESPO5",
+			"Status": "sap-icon://complete",
+			"Line": "10",
+			"Product": "7000134395",
+			"ExpQty": "1000",
+			"RecQty": "1000",
+			"Batch": "THRTEST",
+			"Bin": "GR-ZONE",
+			"Stock": "FO",
+			"Pack": "Pack",
+			"Date": "9/01/21",
+			"selectedDate":"",
+
+			"RecQtyDropSelected": "",
+			"RecQtyDrop": [{
+				"key": "KIT",
+				"value": "KIT"
+			}, {
+				"key": "ROL",
+				"value": "ROL"
+
+			}, {
+				"key": "EA",
+				"value": "EA"
+
+			}],
+
+			"Items": [
+				{
+				"ItemIBD": "180010725",
+				"PO": "4500003326",
+				"VendorID": "PV2009",
+				"VendorName": "ADRESSH CHANGE",
+				"ASN": "DANTESPO5",
+				"Status": "sap-icon://complete",
+				"Line": "10",
+				"Product": "7000134395",
+				"ExpQty": "1000",
+				"RecQty": "1000",
+				"Batch": "THRTEST",
+				"Bin": "GR-ZONE",
+				"Stock": "FO",
+				"Pack": "Pack",
+				"Date": "09/01/2000",
+
+				"RecQtyDropSelected": "",
+				"RecQtyDrop": [{
+					"key": "KIT",
+					"value": "KIT"
+				}, {
+					"key": "ROL",
+					"value": "ROL"
+
+				}, {
+					"key": "EA",
+					"value": "EA"
+
+				}]
+			}, 
+			{
+				"ItemIBD": "180010725",
+				"PO": "4500003326",
+				"VendorID": "PV2009",
+				"VendorName": "ADRESSH CHANGE",
+				"ASN": "DANTESPO5",
+				"Status": "sap-icon://complete",
+				"Line": "10",
+				"Product": "7000134395",
+				"ExpQty": "1000",
+				"RecQty": "1000",
+				"Batch": "THRTEST",
+				"Bin": "GR-ZONE",
+				"Stock": "FO",
+				"Pack": "Pack",
+				"Date": "09/01/2000",
+				"RecQtyDrop": [{
+					"key": "KIT",
+					"value": "KIT"
+				}, {
+					"key": "ROL",
+					"value": "ROL"
+
+				}, {
+					"key": "EA",
+					"value": "EA"
+
+				}]
+			}, 
+			{
+				"ItemIBD": "180010725",
+				"PO": "4500003326",
+				"VendorID": "PV2009",
+				"VendorName": "ADRESSH CHANGE",
+				"ASN": "DANTESPO5",
+				"Status": "sap-icon://goalseek",
+				"Line": "10",
+				"Product": "7000134395",
+				"ExpQty": "1000",
+				"RecQty": "1000",
+				"Batch": "THRTEST",
+				"Bin": "GR-ZONE",
+				"Stock": "FO",
+				"Pack": "Pack",
+				"Date": "09/01/2000",
+				"RecQtyDrop": [{
+					"key": "KIT",
+					"value": "KIT"
+				}, {
+					"key": "ROL",
+					"value": "ROL"
+
+				}, {
+					"key": "EA",
+					"value": "EA"
+
+				}]
+			}]
+		}, 
+		{
+			"IBD": "180010729",
+			"PO": "4500003329",
+			"VendorID": "PV2008",
+			"VendorName": "PURCHASING",
+			"ASN": "DANTESPO5",
+			"Line": "10",
+			"Status": "sap-icon://complete",
+			"Product": "7000134395",
+			"ExpQty": "1000",
+			"RecQty": "1000",
+			"Batch": "THRTEST",
+			"Bin": "GR-ZONE",
+			"Stock": "FO",
+			"Pack": "Pack",
+			"Date": "10/10/21",
+			"selectedDate":"",
+
+			"RecQtyDropSelected": "",
+			"RecQtyDrop": [{
+				"key": "KIT",
+				"value": "KIT"
+			}, {
+				"key": "ROL",
+				"value": "ROL"
+
+			}, {
+				"key": "EA",
+				"value": "EA"
+
+			}],
+
+			"Items": [
+				{
+				"ItemIBD": "180010729",
+				"PO": "4500003329",
+				"VendorID": "PV2008",
+				"VendorName": "PURCHASING",
+				"ASN": "DANTESPO5",
+
+				"Status": "sap-icon://goalseek",
+				"Line": "10",
+				"Product": "7000134395",
+				"ExpQty": "1000",
+				"RecQty": "1000",
+				"Batch": "THRTEST",
+				"Bin": "GR-ZONE",
+				"Stock": "FO",
+				"Pack": "Pack",
+				"Date": "09/01/2000",
+
+				"RecQtyDropSelected": "",
+				"RecQtyDrop": [{
+					"key": "KIT",
+					"value": "KIT"
+				}, {
+					"key": "ROL",
+					"value": "ROL"
+
+				}, {
+					"key": "EA",
+					"value": "EA"
+
+				}]
+			}, 
+			{
+				"ItemIBD": "180010729",
+				"PO": "4500003329",
+				"VendorID": "PV2008",
+				"VendorName": "PURCHASING",
+				"ASN": "DANTESPO5",
+
+				"Status": "sap-icon://goalseek",
+				"Line": "10",
+				"Product": "7000134395",
+				"ExpQty": "1000",
+				"RecQty": "1000",
+				"Batch": "THRTEST",
+				"Bin": "GR-ZONE",
+				"Stock": "FO",
+				"Pack": "Pack",
+				"Date": "09/01/2000",
+				"RecQtyDrop": [{
+					"key": "KIT",
+					"value": "KIT"
+				}, {
+					"key": "ROL",
+					"value": "ROL"
+
+				}, {
+					"key": "EA",
+					"value": "EA"
+
+				}]
+			}]
+		}, 
+		{
+			"IBD": "180010733",
+			"PO": "4500003333",
+			"VendorID": "PV2007",
+			"VendorName": "PURCHASING",
+			"ASN": "DANTESPO5",
+			"Status": "sap-icon://complete",
+			"Line": "10",
+			"Product": "7000134395",
+			"ExpQty": "1000",
+			"RecQty": "1000",
+			"Batch": "THRTEST",
+			"Bin": "GR-ZONE",
+			"Stock": "FO",
+			"Pack": "Pack",
+			"Date": "12/1/20",
+			"selectedDate":"",
+
+			"RecQtyDropSelected": "",
+			"RecQtyDrop": [{
+				"key": "KIT",
+				"value": "KIT"
+			}, {
+				"key": "ROL",
+				"value": "ROL"
+
+			}, {
+				"key": "EA",
+				"value": "EA"
+
+			}],
+
+			"Items": [
+				{
+				"ItemIBD": "180010733",
+				"PO": "4500003333",
+				"VendorID": "PV2007",
+				"VendorName": "PURCHASING",
+				"ASN": "DANTESPO5",
+				"Status": "sap-icon://complete",
+				"Line": "10",
+				"Product": "7000134395",
+				"ExpQty": "1000",
+				"RecQty": "1000",
+				"Batch": "THRTEST",
+				"Bin": "GR-ZONE",
+				"Stock": "FO",
+				"Pack": "Pack",
+				"Date": "09/01/2000",
+
+				"RecQtyDropSelected": "",
+				"RecQtyDrop": [{
+					"key": "KIT",
+					"value": "KIT"
+				}, {
+					"key": "ROL",
+					"value": "ROL"
+
+				}, {
+					"key": "EA",
+					"value": "EA"
+
+				}]
+			}, 
+			{
+				"ItemIBD": "180010733",
+				"PO": "4500003333",
+				"VendorID": "PV2007",
+				"VendorName": "PURCHASING",
+				"ASN": "DANTESPO5",
+				"Status": "sap-icon://goalseek",
+				"Line": "10",
+				"Product": "7000134395",
+				"ExpQty": "1000",
+				"RecQty": "1000",
+				"Batch": "THRTEST",
+				"Bin": "GR-ZONE",
+				"Stock": "FO",
+				"Pack": "Pack",
+				"Date": "09/01/2000",
+				"RecQtyDrop": [{
+					"key": "KIT",
+					"value": "KIT"
+				}, {
+					"key": "ROL",
+					"value": "ROL"
+
+				}, {
+					"key": "EA",
+					"value": "EA"
+
+				}]
+			}]
+		}
+
+	],
+	"FilteredReq": [],
+	"NewObject": {
+		"IBD": "",
+		"PO": "",
+		"VendorID": "PV2007",
+		"VendorName": "ADDRESSH CHANGE",
+		"ASN": "DANTESPO4",
+		"Line": "10",
+		"Product": "7000134395",
+		"ExpQty": "",
+		"RecQty": "",
+		"Batch": "",
+		"Bin": "",
+		"Stock": "FO",
+		"Pack": "Pack",
+		"Date": "09/01/2000",
+		"Status": "sap-icon://complete",
+		"RecQtyDropSelected": "",
+		"selectedDate":"",
+		"RecQtyDrop": [{
+			"key": "KIT",
+			"value": "KIT"
+		}, {
+			"key": "ROL",
+			"value": "ROL"
+
+		}, {
+			"key": "EA",
+			"value": "EA"
+
+		}],
+
+		"Items": [{
+			"ItemIBD": "",
+			"PO": "4500003324",
+			"VendorID": "PV2007",
+			"VendorName": "ADDRESSH CHANGE",
+			"ASN": "DANTESPO4",
+			"Line": "10",
+			"Product": "7000134395",
+			"ExpQty": "1000",
+			"RecQty": "1000",
+			"Batch": "THRTEST",
+			"Bin": "GR-ZONE",
+			"Stock": "FO",
+			"Pack": "Pack",
+			"Date": "09/01/2000",
+			"Status": "sap-icon://complete",
+			"RecQtyDropSelected": "",
+			"RecQtyDrop": [{
+				"key": "KIT",
+				"value": "KIT"
+			}, {
+				"key": "ROL",
+				"value": "ROL"
+
+			}, {
+				"key": "EA",
+				"value": "EA"
+
+			}]
+		}]
+	}
+	
+
+}
